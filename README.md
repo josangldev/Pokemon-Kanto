@@ -8,7 +8,7 @@
 
 > **¡Bienvenido al mundo Pokémon!** Una experiencia interactiva que te transporta a la región de Kanto con Pokédex completa, Trivial Pokémon y diseño retro inspirado en Game Boy.
 
-[🌐 Ver sitio en producción]([https://pokemon-kanto.app/](https://pokemon-kanto.vercel.app/))
+[🌐 Ver sitio en producción](https://pokemon-kanto.vercel.app/)
 
 ![Página Principal](docs/screen-main.png)
 
