@@ -385,6 +385,10 @@
   margin-bottom: 1.2rem;
 }
 
+#trivial-options {
+  margin-top: 3.5rem;
+}
+
 #trivial-options button {
   display: block;
   width: 100%;
@@ -642,4 +646,8 @@
   cursor: pointer;
   display: none;
   z-index: 10;
+}
+
+.busqueda-inicio-contenedor .inicio-retro {
+  margin-top: 0.2rem !important;
 }
