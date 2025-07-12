@@ -51,8 +51,6 @@ document.addEventListener("DOMContentLoaded", () => {
     console.warn("Elemento <audio> no encontrado.");
   }
 
-  inicializarCarruselYBusqueda();
-
   const statRows = document.querySelectorAll('.stats-bar');
   statRows.forEach(statsBar => {
     const rows = statsBar.querySelectorAll('.stat-row');
@@ -339,18 +337,19 @@ function inicializarCarruselYBusqueda() {
           const valor = e.target.value.trim().toLowerCase();
           let algunoVisible = false;
           let primerVisibleIndex = -1;
-          let visibles = [];
+          const visibles = [];
+          
           slides.forEach((slide, idx) => {
             const nombre = slide.querySelector('h2')?.textContent?.toLowerCase() || '';
-            if (nombre.includes(valor)) {
-              slide.style.display = '';
+            const isVisible = nombre.includes(valor);
+            slide.style.display = isVisible ? '' : 'none';
+            slide.classList.remove('active-slide');
+            
+            if (isVisible) {
               visibles.push(idx);
               if (primerVisibleIndex === -1) primerVisibleIndex = idx;
               algunoVisible = true;
-            } else {
-              slide.style.display = 'none';
             }
-            slide.classList.remove('active-slide');
           });
           if (busquedaInferior.value && algunoVisible && primerVisibleIndex !== -1) {
             filteredIndexes = visibles;
