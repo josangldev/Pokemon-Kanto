@@ -1,0 +1,84 @@
+@forward 'buttons';
+
+.stats-bar {
+  width: 100%;
+  max-width: 340px;
+  margin: 10px auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: stretch;
+}
+.stat-row {
+  display: flex;
+  align-items: center;
+  font-size: 10px;
+  gap: 12px;
+  justify-content: flex-start;
+}
+.stat-row span:first-child {
+  width: 90px;
+  min-width: 80px;
+  text-align: left;
+  display: inline-block;
+}
+.bar {
+  flex: 1 1 0;
+  height: 12px;
+  border-radius: 4px;
+  margin: 0 8px 0 0;
+  min-width: 40px;
+  transition: width 0.5s;
+  box-shadow: 1px 1px 0 #222, 0 0 0 1px #fff inset;
+  max-width: 220px;
+  background: #e0e0e0;
+  position: relative;
+  overflow: visible;
+}
+.bar-inner {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.5s;
+  position: absolute;
+  left: 0;
+  top: 0;
+  box-shadow: 0 0 6px 1px rgba(0,0,0,0.15);
+  border: 2px solid #fff;
+}
+.bar-hp { background: #e74c3c; }
+.bar-atk { background: #f1c40f; }
+.bar-def { background: #3498db; }
+.bar-spa { background: #9b59b6; }
+.bar-spd { background: #16a085; }
+.bar-spe { background: #e67e22; }
+.stat-value {
+  min-width: 24px;
+  text-align: right;
+  font-family: 'Press Start 2P', cursive;
+  color: #222;
+  margin-left: 8px;
+  position: relative;
+  z-index: 2;
+}
+
+.pokemon-display .pokemon-image:hover {
+  animation: evolucion-retro 0.7s steps(1, end) infinite;
+  filter: brightness(2) drop-shadow(0 0 8px #fff) drop-shadow(0 0 16px #f8e71c);
+  opacity: 1;
+  transform: scale(1.08) rotate(-2deg);
+  transition: none;
+}
+
+@keyframes evolucion-retro {
+  0% { filter: brightness(1) none; }
+  10% { filter: brightness(2) drop-shadow(0 0 8px #fff); }
+  20% { filter: brightness(1.5) drop-shadow(0 0 16px #f8e71c); }
+  30% { filter: brightness(2.5) drop-shadow(0 0 24px #fff); }
+  40% { filter: brightness(1.2) drop-shadow(0 0 8px #f8e71c); }
+  50% { filter: brightness(2.8) drop-shadow(0 0 32px #fff); }
+  60% { filter: brightness(1.5) drop-shadow(0 0 16px #f8e71c); }
+  70% { filter: brightness(2.2) drop-shadow(0 0 24px #fff); }
+  80% { filter: brightness(1.1) drop-shadow(0 0 8px #f8e71c); }
+  90% { filter: brightness(2.5) drop-shadow(0 0 32px #fff); }
+  100% { filter: brightness(1) none; }
+}

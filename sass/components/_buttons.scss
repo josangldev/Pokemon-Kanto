@@ -1,0 +1,49 @@
+@use '../abstracts/abstracts' as abs;
+
+#play-toggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1000;
+  padding: 0.5rem 1rem;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #333;
+  border: 2px solid #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  cursor: pointer;
+  
+  &:hover {
+    background-color: #555;
+  }
+}
+
+.inicio-retro {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.3rem;
+  color: #222;
+  background: #6ecafc;
+  border: 3px solid #222;
+  border-radius: 12px;
+  padding: 0.7rem 2.5rem;
+  margin-top: 0.5rem;
+  box-shadow: 2px 2px 0 #8cbf3f, 0 0 0 2px #cde0a8 inset;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s, border-color 0.2s;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 0 #fff, 2px 2px 0 #8cbf3f;
+}
+
+.inicio-retro:hover {
+  background: #8cbf3f;
+  color: #fff;
+  border-color: #6ecafc;
+  box-shadow: 2px 2px 0 #222, 0 0 0 2px #6ecafc inset;
+}
+
+@include abs.breakpoint(mobile) {
+  #play-toggle {
+    right: 2.5rem;
+  }
+}

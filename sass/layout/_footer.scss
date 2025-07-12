@@ -1,0 +1,77 @@
+@use '../abstracts/abstracts' as abs;
+@use '../base/base' as base;
+@use '../components/components' as comp;
+
+.main-footer {
+  background-color: #333;
+  color: white;
+  padding: 6px;
+  font-size: 13px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  max-width: 100%;
+  width: 100vw;
+  box-sizing: border-box;
+  margin: 0;
+  border: none;
+  .copy{
+    margin: 0 auto;
+    white-space: nowrap;
+  }
+  .git img,
+  .linkedin img{
+    width: 24px;
+    height: 24px;
+    filter: invert(100%);
+    transition: filter 0.3s ease, transform 0.3s ease;
+    display: block;
+  }
+  .git:hover img,
+  .linkedin:hover img {
+    transform: scale(1.3);
+    filter: invert(80%) sepia(80%) saturate(2000%) hue-rotate(0deg) brightness(100%) contrast(100%);
+  }
+  a {
+    img {
+      width: 20px;
+      height: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    &:hover img {
+      transform: scale(1.1);
+    }
+  }
+
+  @include abs.breakpoint(tablet) {
+    .copy {
+      font-size: 12px;
+    }
+
+    a {
+      img {
+        width: 25px;
+        height: 25px;
+      }
+    }
+  }
+
+  @include abs.breakpoint(desktop) {
+    .copy {
+      font-size: 14px;
+    }
+
+    a {
+      img {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+}
+
+

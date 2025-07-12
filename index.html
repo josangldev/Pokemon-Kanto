@@ -1,13 +1,54 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
+    <title>Mundo Pokémon | Comienza tu Aventura</title>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Un viaje interactivo al mundo Pokémon. Atrapa la pokeball para explorar la región de Kanto y descubrir a sus criaturas." />
+    <meta name="theme-color" content="#FF0000" />
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <script type="module" src="/main.js"></script>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
+    <header class="main-header">
+      <h1>Mundo Pokémon</h1>
+    </header>
+    <main class="main-content">
+      <button id="play-toggle" aria-label="Reproducir/Pausar audio" title="Reproducir audio">Play</button>
+      <input type="checkbox" id="toggle" hidden />
+      <label for="toggle" class="container">
+        <div class="pokeball">
+          <div class="line"></div>
+          <div class="button"></div>
+        </div>
+        <div class="background"></div>
+        <div class="contenido">
+          <div class="game-screen">
+            <div class="logo">Región Kanto
+            </div>
+            <div class="menu">
+              <button id="start-pokemon-btn">Pokémon</button>
+              <button id="start-trivial-btn">Trivial Pokémon</button>
+              <button id="start-sobremi-btn">Sobre mí</button>
+            </div>
+            <div class="dialog-box">
+              <p>¡Bienvenido al mundo Pokémon!</p>
+            </div>
+          </div>
+        </div>
+      </label>
+    </main>
+    <footer class="main-footer">
+        <a class="git" href="https://github.com/josangldev" target="_blank"><img src="/icons/pajamas--github.svg" alt="GitHub"></a>
+        <p class="copy">JosanglDev Inc. &copy;</p>
+        <a class="linkedin" href="https://www.linkedin.com/in/jos%C3%A9-antonio-garc%C3%ADa-l%C3%B3pez-4ba263347/" target="_blank"><img src="/icons/entypo-social--linkedin-with-circle.svg" alt="LinkedIn"></a>
+        <audio id="audio-intro" class="audio" loop>
+         <source src="/audio/03 Title Screen.mp3" type="audio/mpeg" />
+        </audio>
+    </footer>
   </body>
 </html>

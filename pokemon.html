@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <title>Pokédex de Kanto | Pokémon</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Explora la Pokédex de Kanto y conoce los detalles de los Pokémon iniciales como Bulbasaur, Ivysaur y Venusaur." />
+    <meta name="theme-color" content="#FF0000" />
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <script type="module" src="/main.js" defer></script>
+  </head>
+  <body>
+    <header class="main-header">
+      <h1>Mundo Pokémon</h1>
+    </header>
+    <main class="main-content menu-visible">
+      <button id="play-toggle" aria-label="Reproducir/Pausar audio" title="Reproducir audio">Play</button>
+      <div class="contenido">
+        <div class="game-screen">
+          <div class="logo">Región Kanto</div>
+          <div class="menu">
+            <div class="pokemon-carousel-container">
+              <button class="carousel-arrow prev-arrow" aria-label="Anterior Pokémon"><span>❮</span></button>
+              <div class="pokemon-slides" id="pokemon-slides"></div>
+              <button class="carousel-arrow next-arrow" aria-label="Siguiente Pokémon"><span>❯</span></button>
+            </div>
+            <div class="busqueda-inicio-contenedor">
+              <div>
+                <input type="text" id="busqueda-pokemon-inferior" class="busqueda-retro" placeholder="Buscar Pokémon..." />
+                <button id="clear-busqueda">×</button>
+              </div>
+              <button id="inicio-btn" class="inicio-retro">Inicio</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="main-footer">
+      <a class="git" href="https://github.com/josangldev" target="_blank">
+        <img src="/icons/pajamas--github.svg" alt="GitHub" />
+      </a>
+      <p class="copy">JosanglDev Inc. &copy;</p>
+      <a class="linkedin" href="https://www.linkedin.com/in/jos%C3%A9-antonio-garc%C3%ADa-l%C3%B3pez-4ba263347/" target="_blank">
+        <img src="/icons/entypo-social--linkedin-with-circle.svg" alt="LinkedIn" />
+      </a>
+      <audio id="audio-intro" class="audio" loop>
+        <source src="/audio/04 Pallet Town.mp3" type="audio/mpeg" />
+      </audio>
+    </footer>
+  </body>
+</html>

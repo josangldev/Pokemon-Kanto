@@ -1,0 +1,30 @@
+@use '../abstracts/abstracts' as abs;
+@use '../base/base' as base;
+@use '../components/components' as comp;
+
+
+.main-header {
+  background-color: #333;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  z-index: 10;
+  h1 {
+    margin: 0;
+    font-size: 1.2em;
+  }
+
+  @include abs.breakpoint(tablet) {
+    padding: 20px;
+    h1 {
+      font-size: 1.5em;
+    }
+  }
+
+  @include abs.breakpoint(desktop) {
+    padding: 25px;
+    h1 {
+      font-size: 2em;
+    }
+  }
+}

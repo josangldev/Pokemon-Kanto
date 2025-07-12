@@ -1,0 +1,31 @@
+@use '../abstracts/abstracts' as abs;
+@use '../base/base' as base;
+@use '../components/components' as comp;
+
+html, body {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+}
+
+body {
+  font-family: abs.$fontpress;
+  background: #222 url('/img/fondo-mobile.jpg') center center/cover no-repeat;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  
+  @include abs.breakpoint(tablet) {
+    background: #222 url('/img/fondo-tablet.jpg') center center/cover no-repeat;
+  }
+
+  @include abs.breakpoint(desktop) {
+    background: #222 url('/img/fondo-desk.webp') center center/cover no-repeat;
+  }
+}
+
+.main-content {
+  flex: 1 1 auto;
+  min-height: 0;
+}
