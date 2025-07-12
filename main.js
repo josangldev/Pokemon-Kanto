@@ -150,7 +150,7 @@ document.addEventListener("DOMContentLoaded", () => {
       questions = getRandomQuestions(questionBank, 10);
       currentQuestionIndex = 0;
       score = 0;
-      trivialScore.style.display = 'none';
+      trivialScore.classList.add('oculto');
       trivialNextBtn.textContent = 'Siguiente';
       const newBtn = trivialNextBtn.cloneNode(true);
       trivialNextBtn.parentNode.replaceChild(newBtn, trivialNextBtn);
@@ -215,7 +215,7 @@ document.addEventListener("DOMContentLoaded", () => {
       trivialOptions.innerHTML = '';
       trivialFeedback.innerHTML = '';
       trivialScore.textContent = `Tu puntuación: ${score} de ${questions.length}`;
-      trivialScore.style.display = 'block';
+      trivialScore.classList.remove('oculto');
       trivialNextBtn.textContent = 'Volver a Jugar';
       const newBtn = trivialNextBtn.cloneNode(true);
       trivialNextBtn.parentNode.replaceChild(newBtn, trivialNextBtn);
