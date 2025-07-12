@@ -5,9 +5,9 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: 'index.html',
-        events: 'events.html',
-        meals: 'meals.html',
-        about: 'about-me.html'
+        pokemon: 'pokemon.html',
+        trivial: 'trivial.html',
+        sobremi: 'sobremi.html'
       }
     }
   }
