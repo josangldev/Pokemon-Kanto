@@ -1,4 +1,4 @@
-# 🌟 Mundo Pokémon - Región Kanto
+# Mundo Pokémon - Región Kanto
 
 [![Pokémon](https://img.shields.io/badge/Pokémon-Kanto-red)](https://github.com/josangldev/Pokemon-Kanto)
 [![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
@@ -7,6 +7,8 @@
 [![AI-Assisted](https://img.shields.io/badge/AI-Assisted%20Development-orange)](https://openai.com/)
 
 > **¡Bienvenido al mundo Pokémon!** Una experiencia interactiva que te transporta a la región de Kanto con Pokédex completa, Trivial Pokémon y diseño retro inspirado en Game Boy.
+
+[🌐 Ver sitio en producción](https://pokemon-kanto.vercel.app/)
 
 ![Página Principal](docs/screen-main.png)
 
