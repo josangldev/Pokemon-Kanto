@@ -1,6 +1,9 @@
 import "./sass/style.scss";
 
+// Espera a que el DOM esté listo para inicializar todo
 document.addEventListener("DOMContentLoaded", () => {
+  // --- Audio principal ---
+  // Controla el play/pause del audio de fondo
   const audio = document.querySelector(".audio");
   const toggle = document.getElementById("toggle");
   const playToggle = document.getElementById("play-toggle");
@@ -23,6 +26,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // --- Navegación entre páginas ---
+  // Botón para ir a la Pokédex
   const startPokemonBtn = document.getElementById("start-pokemon-btn");
   if (startPokemonBtn) {
     startPokemonBtn.addEventListener('click', () => {
@@ -30,6 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // Botón para volver al inicio
   const inicioBtn = document.getElementById("inicio-btn");
   if (inicioBtn) {
     inicioBtn.addEventListener("click", () => {
@@ -65,6 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // Botón para ir al Trivial
   const startTrivialBtn = document.getElementById('start-trivial-btn');
   if (startTrivialBtn) {
     startTrivialBtn.addEventListener('click', () => {
@@ -72,6 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // Lógica para mostrar preguntas, opciones y puntuación
   const trivialContainer = document.getElementById('trivial-container');
   if (trivialContainer) {
     const trivialQuestion = document.getElementById('trivial-question');
@@ -228,6 +236,7 @@ document.addEventListener("DOMContentLoaded", () => {
     startTrivial();
   }
 
+  // Botón para ir a Sobre Mí
   const startSobreMiBtn = document.getElementById("start-sobremi-btn");
   if (startSobreMiBtn) {
     startSobreMiBtn.addEventListener('click', () => {
@@ -235,6 +244,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // --- Pokédex ---
+  // Carga los datos de la Pokédex y muestra el carrusel de Pokémon
   if (window.location.pathname.endsWith("pokemon.html")) {
     async function cargarPokedex() {
       const res = await fetch('/pokedex.json');
@@ -262,12 +273,14 @@ document.addEventListener("DOMContentLoaded", () => {
         `;
         slides.appendChild(div);
       });
-      inicializarCarruselYBusqueda();
+      inicializarCarruselYBusqueda(); // Inicializa la búsqueda y navegación por el carrusel
     }
     cargarPokedex();
   }
 });
 
+// --- Carrusel y búsqueda de la Pokédex ---
+// Inicializa la navegación y filtrado de Pokémon
 function inicializarCarruselYBusqueda() {
   const carouselContainer = document.querySelector('.pokemon-carousel-container');
   if (carouselContainer) {
